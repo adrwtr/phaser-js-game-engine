@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
+</head>
+<body>
+
+    <script>
+    var config = {
+        width: 800,
+        height: 600,
+        type: Phaser.AUTO,
+        parent: 'phaser-example',
+        scene: {
+            create: create
+        }
+    };
+
+    var game = new Phaser.Game(config);
+
+    function create ()
+    {
+        var graphics = this.add.graphics(
+            {
+                lineStyle: { width: 2, color: 0x00ff00 },
+                fillStyle: { color: 0xff00ff }
+            }
+        );
+
+        var circle = new Phaser.Geom.Circle(100, 100, 10);
+        var retangulo = new Phaser.Geom.Rectangle(200, 200, 100, 100);
+
+        // graphics.fillRect(100, 100, 200,  200);
+        graphics.strokeCircleShape(circle);
+        graphics.strokeRectShape(retangulo);
+
+        retangulo.x = 400;
+        graphics.fillRectShape(retangulo);
+
+    }
+
+    </script>
+
+</body>
+</html>
