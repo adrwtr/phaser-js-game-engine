@@ -12,3 +12,7 @@ Exemplo da própria ferramenta
 # exemplo_02.html
 
 Imprimindo objetos primitivos na tela, bola e quadrado.
+
+# exemplo_03.html
+
+Update frames e clear screen
